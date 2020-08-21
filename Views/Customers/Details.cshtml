@@ -1,0 +1,14 @@
+﻿@model MovieCustomerMVCAppWithAuthentication.Models.Customer
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Customer Name</h2>
+<p>Name : @Model.Name</p>
+<p>MembershipType: @Model.MembershipType.DiscountRate</p>
+<p>Date of Birth : @Model.BirthDate</p>
+<p>Subscriber : @Html.CheckBoxFor(c=>c.IsSubscribedToNewsletter)</p>
+<div>
+    @Html.ActionLink("Back", "Index", "Customers", null, new { @class = "btn btn-primary" })
+</div>

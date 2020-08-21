@@ -1,0 +1,13 @@
+﻿@model MovieCustomerMVCAppWithAuthentication.Models.Movie
+@{
+    ViewBag.Title = "Display";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Movie Details</h2>
+
+<p>Movie Name : @Model.Name</p>
+<p>Movie Genre :@Model.genre</p>
+<div>
+    @Html.ActionLink("Back", "Index", "Movies", null, new { @class = "btn btn-primary" })
+</div>
